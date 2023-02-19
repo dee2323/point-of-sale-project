@@ -1,0 +1,39 @@
+.navbar {
+    height: 100%;
+    background-color: white;
+    padding: .5rem;
+    display: flex;
+    background-color: rgb(179, 196, 219);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 4rem;
+    font-size: .9rem;
+
+    a.active p {
+    background-color: rgb(119, 154, 201);
+}
+
+p {
+    margin-bottom: 1.6rem;
+    cursor: pointer;
+    color: rgb(47, 47, 53);
+    border: transparent 1px solid;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 1rem;
+    line-height: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    border-radius: 1rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+}
+
+.logout {
+    margin-top: 7rem;
+}
