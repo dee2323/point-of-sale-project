@@ -1,0 +1,69 @@
+.background {
+    background-color: rgb(179, 196, 219);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .login-container {
+        text-align: center;
+        display: flex;
+        height: 88%;
+        align-items: center;
+        background-color: white;
+        width: 95%;
+        margin: auto;
+        border-radius: 2rem;
+
+        .left-side {
+            width: 50%;
+            margin-left: 4rem;
+            color: #6b746f;
+            border-right: dashed #e1f0e7 2px;
+
+            img {
+                width: 80%;
+                height: 10%;
+            }
+
+            p {
+                font-size: 1.2rem;
+                letter-spacing: 1.4;
+                text-transform: capitalize;
+
+                font-weight: 500;
+            }
+        }
+
+        .right-side {
+            color: #6b746f;
+            width: 45%;
+
+            display: flex;
+            padding: 1.5rem;
+            padding-left: 2.9rem;
+
+            p {
+                width: 80%;
+                margin: auto;
+                margin-top: -1rem;
+                margin-bottom: 1.5rem;
+            }
+
+            input {
+                width: 100%;
+                padding: .8rem;
+                border-radius: .9rem;
+                outline: none;
+                border: 1px #a2bbad solid;
+                margin-bottom: 1rem;
+            }
+
+            button {
+                width: 60%;
+            }
+
+        }
+
+    }
+}
