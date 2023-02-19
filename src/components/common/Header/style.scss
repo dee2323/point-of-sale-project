@@ -1,0 +1,25 @@
+      .bk {
+          background-color: rgb(179, 196, 219);
+      }
+
+      .header-section {
+          i {
+              color: rgb(179, 196, 219);
+
+              font-size: 1.5rem;
+              padding-right: .4rem;
+          }
+
+          background-color: white;
+          border-bottom: 1px rgb(179, 196, 219) solid;
+          width: 70rem;
+          padding:.5rem;
+          padding-left: 2.5rem;
+          cursor: pointer;
+          border-top-left-radius: 5rem;
+
+          p {
+              color: rgb(36, 36, 58);
+
+          }
+      }
