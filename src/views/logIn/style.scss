@@ -40,7 +40,9 @@
             width: 45%;
 
             display: flex;
+            flex-wrap: wrap;
             padding: 1.5rem;
+            padding-top: 4rem;
             padding-left: 2.9rem;
 
             p {
@@ -57,12 +59,22 @@
                 outline: none;
                 border: 1px #a2bbad solid;
                 margin-bottom: 1rem;
+
             }
 
             button {
                 width: 60%;
             }
 
+            .error {
+
+                width: 90%;
+                margin-top: 1rem;
+                margin-left: -2.1rem;
+                padding: 1rem;
+                color: red;
+                height: 2rem;
+            }
         }
 
     }
