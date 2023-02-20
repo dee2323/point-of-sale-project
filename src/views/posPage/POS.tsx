@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react'
-
+import React, { useState, useContext } from 'react'
 import ProductCard from '../../components/productCard'
 import './style.scss'
 import { category, products } from '../../types'
@@ -7,16 +6,29 @@ import Cart from './Cart/Cart'
 import Header from '../../components/common/Header'
 
 import { productsContext } from '../../context/productContext'
-interface props {
-
-}
-export const POS: React.FC<props> = () => {
+import { categoriesContext } from '../../context/CategoryContext'
+import Category from '../../components/CategoryCart'
+export const POS: React.FC = () => {
     const sampleProductsContext = useContext(productsContext)
-
-    const products = (sampleProductsContext?.products)
-    console.log(products, 'ppp')
+    const sampleAppContext = useContext(categoriesContext);
+    const [activeItem, setActiveItem] = useState<category | null>(null);
+    const [isAllActive, setIsAllActive] = useState<boolean>(true);
+    const [products, setProducts] = useState<products[] | undefined>(sampleProductsContext?.products)
+    const handleClick = (category: category | undefined) => {
+        setActiveItem(category || null);
+        setIsAllActive(false);
+        console.log(category, "category")
+        const c = category?.category?.toLocaleLowerCase()
+        console.log(c)
+        setProducts(sampleProductsContext?.products.filter(product => { return product?.category?.toLowerCase() === c }
+        ))
+    };
+    const handleAllClick = () => {
+        setActiveItem(null);
+        setIsAllActive(true);
+        setProducts(sampleProductsContext?.products)
+    };
     return (
-
         <>
             <main className="main-section">
                 <Header />
@@ -24,8 +36,12 @@ export const POS: React.FC<props> = () => {
                 <h2>choose category</h2>
 
                 <section className="category-section">
+                    <Category title="All" onClick={handleAllClick} key={'all'} isActive={isAllActive} />
+                    {sampleAppContext?.categories?.map((p: category) => <Category
+                        title={p?.category} key={p.id} onClick={handleClick} isActive={activeItem === p} category={p}
 
-                    categories
+                    />)
+                    }
                 </section>
                 <div className='search' >
                     <input type="text" placeholder='search...' />

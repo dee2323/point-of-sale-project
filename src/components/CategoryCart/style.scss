@@ -1,0 +1,20 @@
+  .category {
+      border: rgb(179, 196, 219) 2px solid;
+      cursor: pointer;
+      margin-left: 5px;
+      width: 15%;
+      height: 3rem;
+      border-radius: .9rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+      overflow: hidden;
+      min-width: 15%;
+      text-overflow: ellipsis;
+  }
+
+  .active {
+      background-color: rgb(179, 196, 219);
+      color: white;
+  }
