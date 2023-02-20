@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react'
 import './style.scss'
 import Header from '../../components/common/Header'
+import Cart from './Cart/Cart'
 
 interface props {
 
@@ -26,6 +27,7 @@ export const POS: React.FC<props> = () => {
                 </section>
 
             </main>
+            <Cart />
 
         </>
     )
