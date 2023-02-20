@@ -14,7 +14,7 @@ export const POS: React.FC<props> = () => {
     const sampleProductsContext = useContext(productsContext)
 
     const products = (sampleProductsContext?.products)
-    console.log(products, 'ppp')
+    
     return (
 
         <>

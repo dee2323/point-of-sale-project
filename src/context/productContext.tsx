@@ -20,14 +20,14 @@ const ProductContextProvider: React.FC<props> = ({ children }: props) => {
     try
     {
       const response = await axios.get("https://pos-project-deema-default-rtdb.firebaseio.com/products/products.json/");
-      console.log(response.data);
+      
 
       if (response.data !== null)
       {
         const result = Object.keys(response.data).map((key) => {
-          console.log(key);
+          
           const product = response.data[key];
-          console.log(product);
+          
 
           if (product !== null)
           {
@@ -37,7 +37,7 @@ const ProductContextProvider: React.FC<props> = ({ children }: props) => {
         });
 
         setProducts(result.filter((product) => product !== undefined));
-        console.log(result);
+        
       } else
       {
         setProducts([]);
