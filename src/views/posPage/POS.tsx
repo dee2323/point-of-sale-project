@@ -21,9 +21,9 @@ export const POS: React.FC<props> = () => {
         setActiveItem(category || null);
         setInput('')
         setIsAllActive(false);
-        
+
         const c = category?.category?.toLocaleLowerCase()
-        
+
         setProducts(sampleProductsContext?.products.filter(product => { return product?.category?.toLowerCase() === c }
         ))
     };
@@ -37,7 +37,7 @@ export const POS: React.FC<props> = () => {
         setInput(e.target.value)
 
         const searchTerm = e.target.value.trim()
-        
+
         if (searchTerm !== '')
         {
             setProducts(products?.filter((product) => {
@@ -83,7 +83,7 @@ export const POS: React.FC<props> = () => {
                 <section className="product-section">
 
                     {products?.length ? products.map((p: products) =>
-                        <ProductCard image={p?.image} price={p?.price} title={p?.title} />)! : <div className='no-product'><img src='./images/no-product1.jpg' /></div>
+                        <ProductCard image={p?.image} key={p.id} price={p?.price} title={p?.title} />)! : <div className='no-product'><img src='./images/no-product1.jpg' /></div>
                     }
                 </section>
 
