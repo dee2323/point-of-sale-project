@@ -17,14 +17,14 @@ const CategoryContextProvider: React.FC<props> = ({ children }: props) => {
         try
         {
             const response = await axios.get("https://pos-project-deema-default-rtdb.firebaseio.com/categories.json/");
-            console.log(response.data);
+            
 
             if (response.data !== null)
             {
                 const result = Object.keys(response.data).map((key) => {
-                    console.log(key);
+                    
                     const category = response.data[key];
-                    console.log(category);
+                    
 
                     if (category !== null)
                     {
@@ -34,7 +34,7 @@ const CategoryContextProvider: React.FC<props> = ({ children }: props) => {
                 });
 
                 setCategories(result.filter((category) => category !== undefined));
-                console.log(result);
+                
             } else
             {
                 setCategories([]);

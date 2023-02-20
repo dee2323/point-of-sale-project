@@ -9,7 +9,7 @@ interface Props {
 
 const PrivateRoute: React.FC<Props>= ({  children, ...rest }) => {
  const {user}:any=useContext(AuthContext)
- console.log('private',user)
+ 
     return (
    user? children:<Navigate to="/login" />
         )

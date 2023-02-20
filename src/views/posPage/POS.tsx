@@ -21,9 +21,9 @@ export const POS: React.FC<props> = () => {
         setActiveItem(category || null);
         setInput('')
         setIsAllActive(false);
-        console.log(category, "category")
+        
         const c = category?.category?.toLocaleLowerCase()
-        console.log(c)
+        
         setProducts(sampleProductsContext?.products.filter(product => { return product?.category?.toLowerCase() === c }
         ))
     };
@@ -37,7 +37,7 @@ export const POS: React.FC<props> = () => {
         setInput(e.target.value)
 
         const searchTerm = e.target.value.trim()
-        console.log(searchTerm)
+        
         if (searchTerm !== '')
         {
             setProducts(products?.filter((product) => {
