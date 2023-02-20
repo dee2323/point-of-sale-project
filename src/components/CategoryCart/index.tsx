@@ -9,7 +9,7 @@ import './style.scss'
 }
 const Category: React.FC <props>= ({title,category,isActive,onClick}) => {
     const className = isActive ? 'active' : '';
-    console.log(className,'classname')
+    
     return (
         <div className={`category ${className}`} onClick={() =>onClick(category) } >{title}</div>
     )
