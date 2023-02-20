@@ -39,7 +39,7 @@ const Login: React.FC = () => {
         })
         setError(null)
     }
-    console.log(error)
+    
 
     return (
         <div className='background'>

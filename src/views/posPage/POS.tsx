@@ -28,6 +28,7 @@ export const POS: React.FC = () => {
         setIsAllActive(true);
         setProducts(sampleProductsContext?.products)
     };
+
     return (
         <>
             <main className="main-section">
