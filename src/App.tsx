@@ -1,12 +1,8 @@
 import React from 'react';
-import './App.css';
-// import Login from './views/logIn';
-import POS from './views/posPage';
-
-
-function App() {
+import Router from './routes';
+const App: React.FC = () => {
   return (
-    <POS />
+    <Router />
   );
 }
 

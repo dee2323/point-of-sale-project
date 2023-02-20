@@ -13,33 +13,44 @@ import { auth } from "../../config/firebase/firebase";
 
 
 const Navbar: React.FC = () => {
+  const handleLogout = async () => {
+    try
+    {
+      await signOut(auth);
 
+
+
+    } catch (error)
+    {
+      //   console.log(error.message);
+    }
+  };
 
   return (
     <div className="navbar">
-
-      <p><Tooltip title="Home" ><HomeTwoToneIcon />
-      </Tooltip></p>
-
-
-      <p><Tooltip title='Categories'>
-        <CategoryTwoToneIcon /></Tooltip>
-      </p>
-
-
-      <p>
-        <Tooltip title='Products' >
-          <Inventory2TwoToneIcon />
-        </Tooltip>
-      </p>
-
-
-      <p className="logout">
-        <Tooltip title='Logout'>
-          <LogoutTwoToneIcon />
-        </Tooltip>
-      </p>
-
+      <NavLink to='/'>
+        <p><Tooltip title="Home" ><HomeTwoToneIcon />
+        </Tooltip></p>
+      </NavLink>
+      <NavLink to='/category'>
+        <p><Tooltip title='Categories'>
+          <CategoryTwoToneIcon /></Tooltip>
+        </p>
+      </NavLink>
+      <NavLink to='/products'>
+        <p>
+          <Tooltip title='Products' >
+            <Inventory2TwoToneIcon />
+          </Tooltip>
+        </p>
+      </NavLink>
+      <NavLink to='/login'>
+        <p className="logout" onClick={handleLogout}>
+          <Tooltip title='Logout'>
+            <LogoutTwoToneIcon />
+          </Tooltip>
+        </p>
+      </NavLink>
 
     </div>
   )
