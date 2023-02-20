@@ -1,0 +1,36 @@
+ .product {
+     padding: .9rem;
+     width: 28%;
+     margin-right: 9px;
+     margin-bottom: 13px;
+     height: 17rem;
+     border-radius: .9rem;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     border: 2px rgb(179, 196, 219) solid;
+
+     img {
+         height: 13rem;
+         width: 15rem;
+         border-radius: .9rem;
+
+     }
+
+     .title {
+
+         width: 100%;
+
+         .price {
+             color: #192419;
+             display: flex;
+             justify-content: end;
+             padding-top: .5rem;
+             font-size: 19px;
+             padding-right: 1rem;
+             font-weight: 500;
+         }
+     }
+
+ }
