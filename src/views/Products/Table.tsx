@@ -42,7 +42,7 @@ export default function StickyHeadTable({ add, setAdd }: props) {
         setRowsPerPage(+event.target.value);
         setPage(0);
     };
-    console.log(sampleAppContext?.products)
+    
 
     return (
         <Paper sx={{ width: '100%', overflow: 'hidden' }}>
