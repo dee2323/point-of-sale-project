@@ -13,15 +13,15 @@ const Cart: React.FC = () => {
                 <ul>
                     <li className="item"><span className="item-image">
                         <img src='./images/shopImage.jpg' height='45rem' width='45rem' /> </span><span className="head">{'title'}</span><span className="item-price">${'price'}</span>
-                        <i className="fas fa-regular fa-trash"></i>
+                        <i className="fas fa-regular fa-trash" />
                     </li >
                     <li className="item"><span className="item-image">
                         <img src='./images/shop.jpg' height='45rem' width='45rem' /> </span><span className="head">{'title'}</span><span className="item-price">${'price'}</span>
-                        <i className="fas fa-regular fa-trash"></i>
+                        <i className="fas fa-regular fa-trash" />
                     </li >
                     <li className="item"><span className="item-image">
                         <img src='./images/shop.jpg' height='45rem' width='45rem' /> </span><span className="head">{'title'}</span><span className="item-price">${'price'}</span>
-                        <i className="fas fa-regular fa-trash"></i>
+                        <i className="fas fa-regular fa-trash" />
                     </li >
 
 

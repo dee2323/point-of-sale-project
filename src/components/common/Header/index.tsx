@@ -6,7 +6,7 @@ const Header: React.FC = () => {
             <section className="header-section">
 
                   <p>   
-                     <i className="fas fa-duotone fa-shop"></i>
+                     <i className="fas fa-duotone fa-shop" />
                     POS store</p>
             </section ></div>
     )
