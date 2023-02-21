@@ -4,6 +4,9 @@ import { category } from "../types";
 interface valueInterface {
     categories: category[],
     loading: boolean,
+    handleAddingCategory: (category: string) => void,
+    handleDeletingCategory?: (id: string) => void;
+    handleUpdateCategory: (id: string, category: string | undefined) => void;
 }
 export const categoriesContext = createContext<valueInterface | null>(null);
 interface props {
@@ -17,14 +20,14 @@ const CategoryContextProvider: React.FC<props> = ({ children }: props) => {
         try
         {
             const response = await axios.get("https://pos-project-deema-default-rtdb.firebaseio.com/categories.json/");
-            
+
 
             if (response.data !== null)
             {
                 const result = Object.keys(response.data).map((key) => {
-                    
+
                     const category = response.data[key];
-                    
+
 
                     if (category !== null)
                     {
@@ -34,7 +37,7 @@ const CategoryContextProvider: React.FC<props> = ({ children }: props) => {
                 });
 
                 setCategories(result.filter((category) => category !== undefined));
-                
+
             } else
             {
                 setCategories([]);
@@ -50,11 +53,33 @@ const CategoryContextProvider: React.FC<props> = ({ children }: props) => {
     useEffect(() => {
         getCategories();
     }, [])
+    const handleAddingCategory = async (category: string) => {
+        await axios.post("https://pos-project-deema-default-rtdb.firebaseio.com/categories.json/",
+            { category: category, id: categories.length });
+        getCategories();
 
+    }
+    const handleDeletingCategory = async (id: string) => {
+        await axios.delete("https://pos-project-deema-default-rtdb.firebaseio.com/categories/" + id + ".json");
+        getCategories();
+
+    }
+    const handleUpdateCategory = async (id: string, category: string | undefined) => {
+        await axios.patch(
+            "https://pos-project-deema-default-rtdb.firebaseio.com/categories/" + id + ".json",
+            {
+                id,
+                category
+            }
+        );
+        getCategories();
+    }
     const sampleAppContext: valueInterface = {
-
+        handleAddingCategory,
         categories,
         loading,
+        handleDeletingCategory,
+        handleUpdateCategory,
 
 
     };
