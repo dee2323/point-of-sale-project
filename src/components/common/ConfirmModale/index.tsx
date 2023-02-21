@@ -6,7 +6,7 @@ interface props {
     handleDeleting?: (id: string) => void
 }
 const Confirm: React.FC<props> = ({ setShowOverlay, id, handleDeleting = () => { } }: props) => {
-    console.log(id)
+    
     return (<div className="overlay" id="overlay">
         <div className="confirm-box">
             <h2 className="header">confirm delete<span className="close"
