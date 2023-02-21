@@ -1,0 +1,110 @@
+.overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    background-color: rgba(135, 136, 138, 0.253);
+}
+
+.confirm-box {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 30%;
+    top: 33%;
+    left: 35%;
+    background: rgb(229, 234, 241);
+    border-radius: 5px;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, .4);
+    padding-bottom: 1rem;
+}
+
+.p {
+    height: 90%;
+    top: 4%;
+}
+
+.close {
+    cursor: pointer;
+    color: rgb(143, 36, 36);
+    border: 1px solid transparent;
+    padding: .3rem;
+}
+
+.close:hover {
+    // border: 1px solid rgb(66, 59, 122);
+    background-color: rgb(153, 168, 187);
+}
+
+
+.display {
+    display: none;
+}
+
+.confirmBtns {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 1rem;
+
+}
+
+.cbtn {
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.confirmBtns button {
+    all: unset;
+    border: 2px rgb(105, 146, 185) solid;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    padding: .5rem;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.confirmBtns button :hover {
+    background-color: white;
+}
+
+.header {
+    background-color: rgb(179, 196, 219);
+    margin-top: 0%;
+    padding: .7rem;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 1rem;
+    text-transform: capitalize;
+}
+
+.addProductForm {
+    height: 80%;
+    padding: .5rem;
+    margin-top: -.5rem;
+}
+
+.addProductForm input {
+    margin: auto;
+    margin-bottom: .3rem;
+    width: 90%;
+    padding: .8rem;
+
+}
+
+.addProductForm label {
+    display: block;
+    padding: .4rem;
+    text-align: start;
+    text-transform: capitalize;
+}
+
+#confirmDeleting {
+    background-color: rgb(105, 146, 185);
+    color: white
+}

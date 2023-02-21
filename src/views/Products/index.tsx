@@ -1,13 +1,13 @@
 import React from 'react'
 import Layout from '../../layout'
+import Products from './Products'
 
-const CategoryPage: React.FC = () => {
+const ProductsPage: React.FC = () => {
     return (
         <Layout>
-            <div>products</div>
+            <Products />
         </Layout>
-
     )
 }
 
-export default CategoryPage;
+export default ProductsPage
