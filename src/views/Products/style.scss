@@ -1,0 +1,42 @@
+.table {
+    width: 80%;
+    margin: auto;
+    margin-top: .75rem;
+    text-transform: capitalize;
+    text-align: center;
+
+    i {
+        font-size: 1rem;
+        color: rgb(153, 7, 7);
+        cursor: pointer;
+        transition: .2s;
+    }
+
+    .edit {
+        color: rgb(60, 125, 211);
+    }
+}
+
+img {
+    height: 6rem;
+    width: 6rem;
+}
+
+.input,
+select {
+    padding: .5rem;
+    padding-left: 7rem;
+    display: flex;
+    justify-content: space-between;
+
+    button {
+        width: 20%;
+        margin-left: 0;
+    }
+
+}
+
+select {
+    width: 99%;
+    padding-left: 1rem;
+}
