@@ -1,13 +1,13 @@
 import React from 'react'
 import Layout from '../../layout'
+import Categories from './Categories'
 
-
-const CategoryPage: React.FC = () => {
+const CategoryPage:React.FC = () => {
     return (
         <Layout>
-            <div>categories</div>
+              <Categories />
         </Layout>
-
+      
     )
 }
 
