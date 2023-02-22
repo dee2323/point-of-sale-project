@@ -28,7 +28,7 @@ const SearchInput: React.FC<props> = ({ type }) => {
             type === 'product' ? productContext?.clearSearch() : categoryContext?.clearSearch();
         }
     }
-    console.log(input, 'input')
+    
     return (
         <input type='text' value={input} placeholder="search..." onChange={handleChange} />
     )
