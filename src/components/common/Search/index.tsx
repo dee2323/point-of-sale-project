@@ -12,23 +12,21 @@ const SearchInput: React.FC<props> = ({ type }) => {
     useEffect(() => {
         return () => {
             setInput('');
-            // productContext?.setSearching(false)
-            // categoryContext?.setSearching(false)
-            // productContext?.clearSearch()
-            // categoryContext?.clearSearch()
+            productContext?.setSearching(false)
+            categoryContext?.setSearching(false)
         }
     }, [])
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setInput(event.target.value)
-        // const searchTerm = event.target.value.trim();
-        // if (searchTerm)
-        // {
-        //     type === 'product' ? productContext?.searchProducts(searchTerm) : categoryContext?.searchCategories(searchTerm);
-        //     type === 'product' ? productContext?.setSearching(true) : categoryContext?.setSearching(true);
-        // } else
-        // {
-        //     type === 'product' ? productContext?.clearSearch() : categoryContext?.clearSearch();
-        // }
+        const searchTerm = event.target.value.trim();
+        if (searchTerm)
+        {
+            type === 'product' ? productContext?.searchProducts(searchTerm) : categoryContext?.searchCategories(searchTerm);
+            type === 'product' ? productContext?.setSearching(true) : categoryContext?.setSearching(true);
+        } else
+        {
+            type === 'product' ? productContext?.clearSearch() : categoryContext?.clearSearch();
+        }
     }
     console.log(input, 'input')
     return (
