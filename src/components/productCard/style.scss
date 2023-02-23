@@ -4,6 +4,7 @@
      margin-right: 9px;
      margin-bottom: 13px;
      height: 17rem;
+     position: relative;
      border-radius: .9rem;
      display: flex;
      flex-direction: column;
@@ -12,7 +13,7 @@
      border: 2px rgb(179, 196, 219) solid;
 
      img {
-         height: 13rem;
+         height: 12rem;
          width: 15rem;
          border-radius: .9rem;
 
@@ -25,12 +26,41 @@
          .price {
              color: #192419;
              display: flex;
-             justify-content: end;
+             justify-content: start;
              padding-top: .5rem;
              font-size: 19px;
              padding-right: 1rem;
              font-weight: 500;
+             line-height: 2;
          }
+
      }
+
+     .add {
+         height: 40px;
+         display: inline-block;
+         margin-left: 1.4rem;
+         width: 40px;
+         border-radius: 10px;
+         background-color: rgb(179, 196, 219);
+         border: none;
+         outline: none;
+         cursor: pointer;
+         position: absolute;
+         right: 1rem;
+         bottom: 1.2rem;
+
+         i {
+             color: white;
+             font-size: 20px;
+         }
+
+
+     }
+
+     .add:hover i {
+         color: rgb(102, 152, 218);
+     }
+
 
  }

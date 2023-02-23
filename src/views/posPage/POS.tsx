@@ -81,9 +81,10 @@ export const POS: React.FC<props> = () => {
                     <input type="text" placeholder='search...' value={input} onChange={(e) => handleChange(e)} />
                 </div>
                 <section className="product-section">
-
                     {products?.length ? products.map((p: products) =>
-                        <ProductCard image={p?.image} key={p.id} price={p?.price} title={p?.title} />)! : <div className='no-product'><img src='./images/no-product1.jpg' /></div>
+                        <ProductCard product={p}
+                            image={p?.image} price={p?.price}
+                            title={p?.title} />)! : <div className='no-product'><img src='./images/no-product1.jpg' /></div>
                     }
                 </section>
 
