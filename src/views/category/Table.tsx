@@ -34,7 +34,7 @@ export default function StickyHeadTable({ add, setAdd }: props) {
         setPage(newPage);
     };
     const handleChangeRowsPerPage = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setRowsPerPage(+event.target.value);
+        setRowsPerPage(Number(event.target.value));
         setPage(0);
     };
     
