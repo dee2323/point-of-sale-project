@@ -7,6 +7,7 @@ import ProductContextProvider from './context/productContext';
 import CategoryContextProvider from './context/CategoryContext';
 import '@fortawesome/fontawesome-free/css/all.min.css'
 import { BrowserRouter } from 'react-router-dom'
+import CartProvider from './context/CartContext';
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
@@ -15,7 +16,9 @@ root.render(
     <ProductContextProvider>
       <CategoryContextProvider>
         <BrowserRouter>
-          <App />
+          <CartProvider>
+            <App />
+          </CartProvider>
         </BrowserRouter>
       </CategoryContextProvider>
     </ProductContextProvider>
