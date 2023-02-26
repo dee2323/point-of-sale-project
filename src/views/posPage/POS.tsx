@@ -7,10 +7,7 @@ import Cart from './Cart/Cart'
 import Header from '../../components/common/Header'
 import { categoriesContext } from '../../context/CategoryContext'
 import { productsContext } from '../../context/productContext'
-interface props {
-
-}
-export const POS: React.FC<props> = () => {
+export const POS: React.FC = () => {
     const sampleAppContext = useContext(categoriesContext);
     const sampleProductsContext = useContext(productsContext)
     const [activeItem, setActiveItem] = useState<category | null>(null);
