@@ -85,7 +85,7 @@ export default function StickyHeadTable({ add, setAdd }: props) {
 
                                                 <TableCell key={'delet'} >
                                                     <i className="fa-solid fa-trash"
-                                                        onClick={() => { setId(String(row.id) || ''); setShowConfirm(true) }}></i>
+                                                        onClick={() => { setId(String(row.id) || ''); setShowConfirm(true) }} />
 
                                                 </TableCell>
                                                 <TableCell key={'edit'} >
@@ -94,7 +94,7 @@ export default function StickyHeadTable({ add, setAdd }: props) {
                                                             setId(String(row.id) || '');
                                                             setEdit(true)
                                                         }}
-                                                    ></i>
+                                                     />
                                                 </TableCell>
                                             </TableRow>
                                         );

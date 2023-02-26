@@ -20,7 +20,7 @@ const ProductCard: React.FC<props> = ({ product, image = "./images/shopImage.jpg
 
                 <span className='price'>
                     <button className='add' onClick={() => sampleCartContext?.addToCart(product)}>
-                        <i className="fas fa-light fa-cart-arrow-down"></i></button>
+                        <i className="fas fa-light fa-cart-arrow-down" /></button>
                     ${price}</span>  </p>
 
         </div>

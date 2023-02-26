@@ -65,7 +65,7 @@ const Cart: React.FC = () => {
                                         onClick={() =>
                                             sampleCartContext.deleteFromCart(String(p.id))
                                         }
-                                    ></i>
+                                     />
                                 </li>
                             );
                         })
