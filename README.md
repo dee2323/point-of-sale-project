@@ -1,46 +1,96 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<br>
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/62269745/174906065-7bb63e14-879a-4740-849c-0821697aeec2.png#gh-light-mode-only" width="40%">
+</p>
 
-## Available Scripts
 
-In the project directory, you can run:
+<h1> Point Of Sale System</h1>
+<br />
 
-### `npm start`
+## Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [Overview](#overview)
+- [Technologies](#technologies)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Overview
+This project is a web-based point-of-sale system (POS) designed for use in supermarkets. The app provides a user-friendly interface that allows supermarkets to add products to a cart and calculate the total amount for the order.
 
-### `npm run build`
+With this system, supermarkets can keep track of their inventory, manage customer orders, and process payments more efficiently. The app is designed to be intuitive and easy to use, making it an ideal solution for businesses of all sizes.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The POS system is built using modern web technologies, ensuring that it is fast, reliable, and scalable. Overall, this project aims to simplify the process of managing customer orders and streamlining the checkout process for supermarkets.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Technologies
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<p align="center">
+<img alt="React" src="https://user-images.githubusercontent.com/62269745/151359683-6602ec17-a473-43a5-b7e7-866d8194c959.svg" height="40" width="40" />
+<img src="https://www.vectorlogo.zone/logos/typescriptlang/typescriptlang-icon.svg" alt="typescript" height="40"  width="40" />
+<img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="firebase" height="40" width="40" />
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg" alt="scss" height="40" width="40" />
+<img src="https://user-images.githubusercontent.com/4060187/61057426-4e5a4600-a3c3-11e9-9114-630743e05814.png" height="40" width="40" />   
+</p>
 
-### `npm run eject`
+- [React](https://reactjs.org/): JavaScript library for building user interfaces 
+- [TypeScript](https://www.typescriptlang.org/): Superset of JavaScript with static typing
+- [Firebase](https://firebase.google.com/): Backend-as-a-Service platform for building web and mobile applications
+- [Sass](https://sass-lang.com/): CSS preprocessor
+- [Jest](https://jestjs.io/): JavaScript testing framework
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Installation
+To run this project on your local machine, follow these steps:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<ol>
+  <li>Clone the repository to your local machine:
+    <pre><code>git clone https://github.com/dee2323/point-of-sale-project </code></pre>
+  </li>
+  <li>Install the dependencies:
+    <pre><code>npm install</code></pre>
+  </li>
+  <li>Create a new Firebase project and add a web app to it.</li><br>
+  <li>Copy the Firebase configuration details for your app.
+  </li><br>
+  <li>Start the development server:
+    <pre><code>npm start</code></pre>
+  </li>
+</ol>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Usage 
+****
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Contributing
+We welcome contributions from anyone interested in improving this project. To contribute, please follow these steps:
+<br>
+<ol>
+<li> Fork the repository and clone it to your local machine </li><br>
+<li> Create a new branch for your changes:
+    <pre><code>git checkout -b my-new-feature</code></pre>
+</li>
+<li> Make your changes and commit them: 
+    <pre><code>git commit -m 'Add some feature'</code></pre>
+</li>
+<li> Push to the branch: 
+    <pre><code>git push origin my-new-feature</code></pre>
+</li>
+<li> Submit a pull request</li>
+</ol>
 
-## Learn More
+Please make sure that your code follows our code of conduct, and that your pull request includes tests and documentation for any new features. We also encourage you to open an issue if you find any bugs or have suggestions for new features.
+<br><br>
+Thank you for your contributions!
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## License
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+
+
+
+ <h2>Notes</h2>
+ <p> This project is a part of the <a href="https://www.foothillsolutions.com/">Foothill Solutions<a/>  internship program.<p>
+
+
