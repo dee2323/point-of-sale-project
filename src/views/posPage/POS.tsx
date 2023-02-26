@@ -79,7 +79,7 @@ export const POS: React.FC = () => {
                 </div>
                 <section className="product-section">
                     {products?.length ? products.map((p: products) =>
-                        <ProductCard product={p}
+                        <ProductCard product={p} key={p.id}
                             image={p?.image} price={p?.price}
                             title={p?.title} />)! : <div className='no-product'><img src='./images/no-product1.jpg' /></div>
                     }
