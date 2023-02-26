@@ -65,7 +65,7 @@ const Overlay: React.FC<props> = ({ setAdd, setEdit, id, edit }) => {
                         <button
                             id="confirmDeleting"
                             type="submit"
-                            onClick={(e) => formik.handleSubmit()}
+                            onClick={() => formik.handleSubmit()}
                         >
                             Submit
                         </button>

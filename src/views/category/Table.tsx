@@ -8,7 +8,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
-import { category, products } from '../../types';
+import { category } from '../../types';
 import { CategoryColumn } from '../../types';
 import Overlay from './CategoryModal';
 import Confirm from '../../components/common/ConfirmModale';
@@ -37,7 +37,7 @@ export default function StickyHeadTable({ add, setAdd }: props) {
         setRowsPerPage(Number(event.target.value));
         setPage(0);
     };
-    
+
     return (
 
         <Paper sx={{ width: '100%', overflow: 'hidden' }}>

@@ -1,7 +1,5 @@
 import * as React from 'react';
 import Snackbar from '@mui/material/Snackbar';
-import Fade from '@mui/material/Fade';
-import { TransitionProps } from '@mui/material/transitions';
 import MuiAlert, { AlertProps } from '@mui/material/Alert';
 
 const Alert = React.forwardRef<HTMLDivElement, AlertProps>(function Alert(

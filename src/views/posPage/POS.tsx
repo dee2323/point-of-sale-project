@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react'
+import React, { useState, useContext } from 'react'
 import Category from '../../components/CategoryCart'
 import ProductCard from '../../components/productCard'
 import './style.scss'

@@ -40,7 +40,6 @@ const CartProvider: React.FC<props> = ({ children }) => {
 
     const addToCart = (product: products) => {
         let count = 0;
-        const { id } = product;
         let updatedProduct: CartProduct = { ...product, count: 1 };
 
         cartProducts.forEach((item) => {

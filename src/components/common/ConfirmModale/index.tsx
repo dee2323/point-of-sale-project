@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import '../../../assets/styles/style.scss'
 interface props {
     setShowOverlay: React.Dispatch<React.SetStateAction<boolean>>,
@@ -6,7 +6,7 @@ interface props {
     handleDeleting?: (id: string) => void
 }
 const Confirm: React.FC<props> = ({ setShowOverlay, id, handleDeleting = () => { } }: props) => {
-    
+
     return (<div className="overlay" id="overlay">
         <div className="confirm-box">
             <h2 className="header">confirm delete<span className="close"
