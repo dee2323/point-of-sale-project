@@ -74,17 +74,17 @@ const Overlay: React.FC<props> = ({ setAdd, setEdit, id, edit }) => {
         onClick={handleCancel} >x</span></h2>
       <form className="addProductForm" onSubmit={(e) => e.preventDefault()}>
         <label>title</label>
-        <input placeholder="product title" onChange={(e) => handleChange(e)} name="title" value={input.title} />
+        <input placeholder="product title" disabled={loading} onChange={(e) => handleChange(e)} name="title" value={input.title} />
         <label>price</label>
         <input placeholder="price" type='number' min="0" defaultValue='0'
           name='price'
-          onChange={(e) => handleChange(e)} value={input.price} />
+          onChange={(e) => handleChange(e)} value={input.price} disabled={loading} />
         <label>code</label>
         <input placeholder="code"
-          name="code"
+          name="code" disabled={loading}
           onChange={(e) => handleChange(e)} value={input.code} />
         <label>category</label>
-        {sampleAppContext?.categories.length ? <select name="category" value={selectedOption}
+        {sampleAppContext?.categories.length ? <select name="category" value={selectedOption} disabled={loading}
           onChange={(e) => {
             handleSelectChange(e);
 
@@ -96,12 +96,13 @@ const Overlay: React.FC<props> = ({ setAdd, setEdit, id, edit }) => {
           ))}
         </select> : <input placeholder="category" name="category"
           value={input.category}
-          onChange={(e) => handleChange(e)} />
+          onChange={(e) => handleChange(e)} disabled={loading} />
         }
         <label>description</label>
         <input placeholder="description"
           name="description"
           value={input.description}
+          disabled={loading}
           onChange={(e) => handleChange(e)} />
         {!edit ? <>
           <label>image</label>
@@ -110,11 +111,13 @@ const Overlay: React.FC<props> = ({ setAdd, setEdit, id, edit }) => {
 
       </form>
 
-      <div className={`confirmBtns ${loading ? 'disabled' : ''}`}>
-        <button id="cancelDeleting" style={{ marginRight: '1rem' }} onClick={handleCancel}>
+      <div className={`confirmBtns`}>
+        {loading && <div style={{ display: 'inline' }}>image uploading</div>}
+        <button id="cancelDeleting" disabled={loading}
+          style={{ marginRight: '1rem', marginLeft: '.4rem', opacity: loading ? .5 : 1 }} onClick={handleCancel}>
           Cancel
         </button>
-        <button id="confirmDeleting" style={{ backgroundColor: 'rgb(105, 146, 185)', color: 'white' }}
+        <button id="confirmDeleting" style={{ backgroundColor: 'rgb(105, 146, 185)', color: 'white', opacity: loading ? .5 : 1 }}
           onClick={handleConfirm} disabled={loading}>Submit</button>
       </div>
     </div>
