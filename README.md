@@ -76,7 +76,7 @@ The product categories page allows you to manage your inventory categories. You 
 <h4>
 POS Page:</h4>
 The POS (point of sale) page is designed to help cashiers check out customers. The page displays a list of all products that are searchable and filterable by product category. You can start a new cart checkout, add products to the cart, change the quantity of added products, delete a product, edit the tax, apply a discount, and check out the cart. The page also includes a clear cart button to empty the cart when needed.
-
+<br><br>
 Thank you for using my React project! If you have any questions or issues, please contact me.
 
 ## Contributing
