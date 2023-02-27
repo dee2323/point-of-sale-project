@@ -33,12 +33,22 @@ const Overlay: React.FC<props> = ({ setAdd, setEdit, id, edit }) => {
       code: ''
     }
   const [input, setInput] = useState<products>(initalInput)
+  const [loading, setLoading] = useState(false)
   const uploadFile = async (event: React.ChangeEvent<HTMLInputElement>) => {
     const imageUpload = event.target.files?.[0]
     const imageRef = ref(storage, `images/${imageUpload?.name}+${new Date()}`);
-    const snapshot = await uploadBytes(imageRef, imageUpload!);
-    const url = await getDownloadURL(snapshot.ref);
-    setInput({ ...input, image: url });
+    // const snapshot = await uploadBytes(imageRef, imageUpload!);
+    // const url = await getDownloadURL(snapshot.ref);
+    // setInput({ ...input, image: url });
+    setLoading(true)
+    uploadBytes(imageRef, imageUpload!).then((snapshot) => {
+      getDownloadURL(snapshot.ref).then((url) => {
+        setInput((input) => {
+          setLoading(false)
+          return { ...input, image: url }
+        });
+      });
+    });
 
   };
   const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
@@ -93,17 +103,19 @@ const Overlay: React.FC<props> = ({ setAdd, setEdit, id, edit }) => {
           name="description"
           value={input.description}
           onChange={(e) => handleChange(e)} />
-        <label>image</label>
-        <input placeholder="image" type='file' onChange={uploadFile} />
+        {!edit ? <>
+          <label>image</label>
+          <input placeholder="image" type='file' onChange={uploadFile} /> </>
+          : ''}
 
       </form>
 
-      <div className="confirmBtns">
+      <div className={`confirmBtns ${loading ? 'disabled' : ''}`}>
         <button id="cancelDeleting" style={{ marginRight: '1rem' }} onClick={handleCancel}>
           Cancel
         </button>
         <button id="confirmDeleting" style={{ backgroundColor: 'rgb(105, 146, 185)', color: 'white' }}
-          onClick={handleConfirm}>Submit</button>
+          onClick={handleConfirm} disabled={loading}>Submit</button>
       </div>
     </div>
   </div >)
