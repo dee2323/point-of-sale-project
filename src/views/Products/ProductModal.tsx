@@ -3,6 +3,14 @@ import '../../assets/styles/style.scss'
 import { categoriesContext } from "../../context/CategoryContext";
 import { productsContext } from "../../context/productContext";
 import { category, products } from "../../types";
+import {
+  ref,
+  uploadBytes,
+  getDownloadURL,
+  listAll,
+  list,
+} from "firebase/storage";
+import { storage } from "../../config/firebase/firebase";
 interface props {
   setAdd: React.Dispatch<React.SetStateAction<boolean>>;
   setEdit: React.Dispatch<React.SetStateAction<boolean>>;
@@ -25,7 +33,14 @@ const Overlay: React.FC<props> = ({ setAdd, setEdit, id, edit }) => {
       code: ''
     }
   const [input, setInput] = useState<products>(initalInput)
+  const uploadFile = async (event: React.ChangeEvent<HTMLInputElement>) => {
+    const imageUpload = event.target.files?.[0]
+    const imageRef = ref(storage, `images/${imageUpload?.name}+${new Date()}`);
+    const snapshot = await uploadBytes(imageRef, imageUpload!);
+    const url = await getDownloadURL(snapshot.ref);
+    setInput({ ...input, image: url });
 
+  };
   const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedOption(event.target.value);
     setInput({ ...input, category: event.target.value })
@@ -78,9 +93,9 @@ const Overlay: React.FC<props> = ({ setAdd, setEdit, id, edit }) => {
           name="description"
           value={input.description}
           onChange={(e) => handleChange(e)} />
-        {/* <label>image</label>
-                    <input placeholder="image" type='file' onChange={(e)=>setInput({...input,image:e.target.value})} />
-              */}
+        <label>image</label>
+        <input placeholder="image" type='file' onChange={uploadFile} />
+
       </form>
 
       <div className="confirmBtns">
