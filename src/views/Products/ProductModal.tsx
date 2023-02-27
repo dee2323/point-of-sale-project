@@ -112,9 +112,9 @@ const Overlay: React.FC<props> = ({ setAdd, setEdit, id, edit }) => {
       </form>
 
       <div className={`confirmBtns`}>
-        {loading && <div style={{ display: 'inline' }}>image uploading</div>}
+        {loading && <div style={{ display: 'inline', color: 'green', fontWeight: '800' }}>image uploading</div>}
         <button id="cancelDeleting" disabled={loading}
-          style={{ marginRight: '1rem', marginLeft: '.4rem', opacity: loading ? .5 : 1 }} onClick={handleCancel}>
+          style={{ marginRight: '1rem', marginLeft: '2rem', opacity: loading ? .5 : 1 }} onClick={handleCancel}>
           Cancel
         </button>
         <button id="confirmDeleting" style={{ backgroundColor: 'rgb(105, 146, 185)', color: 'white', opacity: loading ? .5 : 1 }}

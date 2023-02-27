@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import Button from '../../../components/common/Button';
 import { cartContext } from '../../../context/CartContext';
+import Order from './order';
 import './style.scss';
 
 const Cart: React.FC = () => {
@@ -9,6 +10,7 @@ const Cart: React.FC = () => {
         tax: 0,
         discount: 0,
     });
+    const [show, setShow] = useState(false)
 
     const subTotalPrice = sampleCartContext?.cartProducts.reduce((total, num) => {
         return total + num.count * num.price;
@@ -65,7 +67,7 @@ const Cart: React.FC = () => {
                                         onClick={() =>
                                             sampleCartContext.deleteFromCart(String(p.id))
                                         }
-                                     />
+                                    />
                                 </li>
                             );
                         })
@@ -100,8 +102,20 @@ const Cart: React.FC = () => {
                         <input disabled value={total.toFixed(2)} />
                     </div>
                 </form>
-                <Button text='order' onClick={() => { }} />
+                <Button text='order' onClick={() => {
+
+                    if (sampleCartContext?.cartProducts && sampleCartContext?.cartProducts?.length > 0)
+                    {
+                        setShow(true)
+                        setInput({
+                            tax: 0,
+                            discount: 0,
+                        });
+                        sampleCartContext?.restTheCart();
+                    }
+                }} />
             </div>
+            {show && <Order setShow={setShow} />}
         </section>
     )
 }
