@@ -6,7 +6,7 @@
 
 
 <h1> Point Of Sale System</h1>
-<br />
+<br>
 
 ## Table of Contents
 
@@ -40,7 +40,9 @@ The POS system is built using modern web technologies, ensuring that it is fast,
 - [TypeScript](https://www.typescriptlang.org/): Superset of JavaScript with static typing
 - [Firebase](https://firebase.google.com/): Backend-as-a-Service platform for building web and mobile applications
 - [Sass](https://sass-lang.com/): CSS preprocessor
-- [Jest](https://jestjs.io/): JavaScript testing framework
+- [Formik](https://formik.org/): A form library for React that simplifies form management
+- [Yup](https://github.com/jquense/yup): A JavaScript schema builder for value parsing and validation
+- [React-router](https://reactrouter.com/): A declarative routing library for React that handles client-side routing
 
 ## Installation
 To run this project on your local machine, follow these steps:
@@ -61,7 +63,21 @@ To run this project on your local machine, follow these steps:
 </ol>
 
 ## Usage 
-****
+Welcome to my React project's user guide! This project includes several pages to help manage your product inventory and sales. Below is a brief overview of each page and its functionality.
+
+ <h4>Login Page:</h4>
+The login page allows authorized users to access the other pages in the system. Users can enter their username and password to log in.
+
+<h4>Products Page:</h4>
+On the products page, you can view, add, update, and delete products in your inventory. The page displays a table of all products with details such as name, price, and quantity. You can use pagination and a search box to filter the products by name or category.
+<h4>
+Product Categories Page:</h4>
+The product categories page allows you to manage your inventory categories. You can view, add, update, and delete categories in a table. Like the products page, you can use pagination and a search box to filter the categories.
+<h4>
+POS Page:</h4>
+The POS (point of sale) page is designed to help cashiers check out customers. The page displays a list of all products that are searchable and filterable by product category. You can start a new cart checkout, add products to the cart, change the quantity of added products, delete a product, edit the tax, apply a discount, and check out the cart. The page also includes a clear cart button to empty the cart when needed.
+<br><br>
+Thank you for using my React project! If you have any questions or issues, please contact me.
 
 ## Contributing
 We welcome contributions from anyone interested in improving this project. To contribute, please follow these steps:
