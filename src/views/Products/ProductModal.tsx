@@ -7,8 +7,6 @@ import {
   ref,
   uploadBytes,
   getDownloadURL,
-  listAll,
-  list,
 } from "firebase/storage";
 import { storage } from "../../config/firebase/firebase";
 interface props {
@@ -22,7 +20,7 @@ const Overlay: React.FC<props> = ({ setAdd, setEdit, id, edit }) => {
   const sampleProductsContext = useContext(productsContext)
   const [selectedOption, setSelectedOption] = useState(sampleAppContext?.categories[0]?.category || '')
   const initalInput: products = edit ?
-    sampleProductsContext?.products.find((p: products) => p.id == id)! : {
+    sampleProductsContext?.products.find((p: products) => p.id === id)! : {
       id: -2,
       title: '',
       price: 0,
@@ -37,9 +35,6 @@ const Overlay: React.FC<props> = ({ setAdd, setEdit, id, edit }) => {
   const uploadFile = async (event: React.ChangeEvent<HTMLInputElement>) => {
     const imageUpload = event.target.files?.[0]
     const imageRef = ref(storage, `images/${imageUpload?.name}+${new Date()}`);
-    // const snapshot = await uploadBytes(imageRef, imageUpload!);
-    // const url = await getDownloadURL(snapshot.ref);
-    // setInput({ ...input, image: url });
     setLoading(true)
     uploadBytes(imageRef, imageUpload!).then((snapshot) => {
       getDownloadURL(snapshot.ref).then((url) => {
